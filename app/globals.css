@@ -1,0 +1,271 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* CrypTalker: Hacker Cybersecurity Green & Black Palette */
+  --background: #0a0e27;
+  --foreground: #00ff41;
+  --card: #0f1229;
+  --card-foreground: #00ff41;
+  --popover: #0f1229;
+  --popover-foreground: #00ff41;
+  --primary: #00ff41;
+  --primary-foreground: #0a0e27;
+  --secondary: #1a1f3a;
+  --secondary-foreground: #00ff41;
+  --muted: #1a1f3a;
+  --muted-foreground: #00aa22;
+  --accent: #00ff41;
+  --accent-foreground: #0a0e27;
+  --destructive: #ff0055;
+  --destructive-foreground: #fff;
+  --border: #00ff41;
+  --input: #0f1229;
+  --ring: #00ff41;
+  --chart-1: #00ff41;
+  --chart-2: #00aa22;
+  --chart-3: #007722;
+  --chart-4: #ff0055;
+  --chart-5: #00ff88;
+  --radius: 0.5rem;
+  --sidebar: #0a0e27;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #00ff41;
+  --sidebar-primary-foreground: #0a0e27;
+  --sidebar-accent: #00aa22;
+  --sidebar-accent-foreground: #0a0e27;
+  --sidebar-border: #00ff41;
+  --sidebar-ring: #00ff41;
+  --secured: #00ff41;
+  --pending: #ffaa00;
+  --error: #ff0055;
+}
+
+.dark {
+  --background: #0a0e27;
+  --foreground: #00ff41;
+  --card: #0f1229;
+  --card-foreground: #00ff41;
+  --popover: #0f1229;
+  --popover-foreground: #00ff41;
+  --primary: #00ff41;
+  --primary-foreground: #0a0e27;
+  --secondary: #1a1f3a;
+  --secondary-foreground: #00ff41;
+  --muted: #1a1f3a;
+  --muted-foreground: #00aa22;
+  --accent: #00ff41;
+  --accent-foreground: #0a0e27;
+  --destructive: #ff0055;
+  --destructive-foreground: #fff;
+  --border: #00ff41;
+  --input: #0f1229;
+  --ring: #00ff41;
+  --chart-1: #00ff41;
+  --chart-2: #00aa22;
+  --chart-3: #007722;
+  --chart-4: #ff0055;
+  --chart-5: #00ff88;
+  --sidebar: #0a0e27;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #00ff41;
+  --sidebar-primary-foreground: #0a0e27;
+  --sidebar-accent: #00aa22;
+  --sidebar-accent-foreground: #0a0e27;
+  --sidebar-border: #00ff41;
+  --sidebar-ring: #00ff41;
+  --secured: #00ff41;
+  --pending: #ffaa00;
+  --error: #ff0055;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-secured: var(--secured);
+  --color-pending: var(--pending);
+  --color-error: var(--error);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+  }
+}
+
+/* Terminal text styling for hacker aesthetic */
+.terminal-text {
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  letter-spacing: 0.05em;
+}
+
+/* Neon glow effects using CSS instead of arbitrary Tailwind */
+.neon-glow {
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.6), 0 0 20px rgba(0, 255, 65, 0.3);
+  filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.4));
+}
+
+.neon-glow-pulse {
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.6), 0 0 20px rgba(0, 255, 65, 0.3);
+  filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.4));
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Cyber grid background pattern */
+.cyber-grid {
+  background-image: linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Scanline effect for CRT monitor aesthetic */
+.scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 65, 0.03),
+    rgba(0, 255, 65, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  animation: scan 0.15s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 2px;
+  }
+}
+
+/* Glass morphism with green neon border */
+.glass {
+  background-color: rgba(0, 255, 65, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+.glass:hover {
+  border-color: rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
+}
+
+/* Neon button with hover glow effect */
+.neon-button {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #00ff41;
+  color: #00ff41;
+  background: rgba(0, 255, 65, 0.05);
+  transition: all 0.3s ease;
+}
+
+.neon-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #00ff41;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.4), inset 0 0 20px rgba(0, 255, 65, 0.1);
+  color: #0a0e27;
+}
+
+.neon-button:hover::before {
+  opacity: 0.2;
+}
+
+/* Input field glow on focus */
+.neon-input {
+  background-color: rgba(15, 18, 41, 0.8);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  color: #00ff41;
+  transition: all 0.3s ease;
+}
+
+.neon-input:focus {
+  border-color: #00ff41;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2), inset 0 0 10px rgba(0, 255, 65, 0.05);
+  outline: none;
+}
+
+.neon-input::placeholder {
+  color: rgba(0, 170, 34, 0.6);
+}
+
+/* Status badges */
+.status-secured {
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
+}
+
+.status-pending {
+  color: #ffaa00;
+  text-shadow: 0 0 10px rgba(255, 170, 0, 0.6);
+}
+
+.status-error {
+  color: #ff0055;
+  text-shadow: 0 0 10px rgba(255, 0, 85, 0.6);
+}
+
+/* Card with neon border */
+.neon-card {
+  background: rgba(15, 18, 41, 0.5);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+  transition: all 0.3s ease;
+}
+
+.neon-card:hover {
+  border-color: rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.15);
+}
